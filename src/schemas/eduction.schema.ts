@@ -49,10 +49,11 @@ export class Education {
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
     user_id: Users;
 
-    @Prop()
-    created_at: Date
+  
+    @Prop({ type: Date }) // Explicitly define type as Date
+    created_at: Date;
 
-    @Prop()
+    @Prop({ type: Date }) 
     updated_at: Date
 
 }

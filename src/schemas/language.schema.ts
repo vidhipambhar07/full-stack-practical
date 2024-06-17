@@ -9,10 +9,10 @@ export class Language {
     @Prop()
     language_name: string
 
-    @Prop()
-    created_at: Date
+    @Prop({ type: Date }) // Explicitly define type as Date
+    created_at: Date;
 
-    @Prop()
+    @Prop({ type: Date }) 
     updated_at: Date
 }
 
