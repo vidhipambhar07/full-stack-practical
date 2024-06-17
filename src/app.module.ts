@@ -7,17 +7,19 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { LanguageController } from './language/language.controller';
 import { LanguageModule } from './language/language.module';
+import { AdminModule } from './admin/admin.module';
+import { EncryptionService } from './encryption/encrytption.service';
 
 
 @Module({
   controllers: [AppController, LanguageController],
-  providers: [AppService],
+  providers: [AppService, EncryptionService],
   imports: [
     ConfigModule.forRoot({
       envFilePath: '.env',
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.MONGODB_URL),
-    UserModule, LanguageModule],
+    UserModule, LanguageModule, AdminModule],
 })
 export class AppModule { }
