@@ -21,11 +21,8 @@ export class KnownLanguages {
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Language' })
     language_id: Language;
 
-    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
-    user_id: Users;
-
    
-    @Prop({ type: Date }) // Explicitly define type as Date
+    @Prop({ type: Date })
     created_at: Date;
 
     @Prop({ type: Date }) 

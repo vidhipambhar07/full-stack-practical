@@ -7,7 +7,7 @@ import { Users } from "./user.schema";
 })
 
 export class TechnicalExperience {
-
+ 
     @Prop()
     tech_name: string
 
@@ -17,15 +17,11 @@ export class TechnicalExperience {
     @Prop()
     exeperience_level: number
 
-
-    @Prop({ type: Date }) // Explicitly define type as Date
+    @Prop({ type: Date })
     created_at: Date;
 
     @Prop({ type: Date }) 
     updated_at: Date
-
-    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
-    user_id: Users;
 
 }
 

@@ -5,7 +5,8 @@ import { TechnicalExperience } from "./technical_exeperince";
 import { KnownLanguages } from "./known_languages";
 
 @Schema({
-    timestamps: true
+    timestamps: true,
+    versionKey: false
 })
 
 export class Users {
@@ -40,7 +41,7 @@ export class Users {
     @Prop()
     known_language: [KnownLanguages]
 
-    @Prop({ type: Date }) 
+    @Prop({ type: Date })
     created_at: Date;
 
     @Prop({ type: Date })

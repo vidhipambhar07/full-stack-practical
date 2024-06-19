@@ -26,8 +26,6 @@ export class WorkExperience {
     @Prop()
     updated_at: Date
 
-    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
-    user_id: Users;
 
 }
 

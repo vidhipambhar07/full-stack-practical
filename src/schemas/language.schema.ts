@@ -6,10 +6,11 @@ import { Date } from "mongoose";
 })
 
 export class Language {
+
     @Prop()
     language_name: string
 
-    @Prop({ type: Date }) // Explicitly define type as Date
+    @Prop({ type: Date }) 
     created_at: Date;
 
     @Prop({ type: Date }) 
